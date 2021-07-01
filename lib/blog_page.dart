@@ -2,7 +2,26 @@ import 'package:blog_app_flutter/widgets/widget_blog_list.dart';
 import 'package:flutter/material.dart';
 
 class BlogPage extends StatelessWidget {
-  const BlogPage({Key? key}) : super(key: key);
+  final List<Widget> widgetBlogList = [
+    widgetBlogs(
+      blogImage: "images/rich.png",
+      blogTitle: "Top 10 tips to retired at 40",
+      blogSubtitle: "The best tips for those who planning to retire early.",
+    ),
+    widgetBlogs(
+      blogImage: "images/house.png",
+      blogTitle:
+          "Learn from the pro to purchase your first house with the five steps",
+      blogSubtitle:
+          "It's important to have your own house, to shelter your family safe. Here is the tips from our professional house manager.",
+    ),
+    widgetBlogs(
+      blogImage: "images/apps.png",
+      blogTitle: "7 apps that can make your life more productive",
+      blogSubtitle:
+          "These apps will boost your daily life to become more productive.",
+    ),
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -31,24 +50,11 @@ class BlogPage extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                widgetBlogs(
-                  blogImage: "images/rich.png",
-                  blogTitle: "Top 10 tips to retired at 40",
-                  blogSubtitle:
-                      "The best tips for those who planning to retire early.",
-                ),
-                widgetBlogs(
-                  blogImage: "images/house.png",
-                  blogTitle:
-                      "Learn from the pro to purchase your first house with the five steps",
-                  blogSubtitle:
-                      "It's important to have your own house, to shelter your family safe. Here is the tips from our professional house manager.",
-                ),
-                widgetBlogs(
-                  blogImage: "images/apps.png",
-                  blogTitle: "7 apps that can make your life more productive",
-                  blogSubtitle:
-                      "These apps will boost your daily life to become more productive.",
+                Column(
+                  children: List.generate(
+                    widgetBlogList.length,
+                    (index) => widgetBlogList[index],
+                  ),
                 ),
                 TextButton(
                   onPressed: () {},
