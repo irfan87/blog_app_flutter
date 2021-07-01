@@ -23,6 +23,17 @@ class BlogPage extends StatelessWidget {
           color: Colors.grey,
         ),
       ),
+      body: Column(
+        children: [
+          Container(
+            child: Image.asset("images/rich.png"),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(20.0),
+              color: Colors.black.withOpacity(0.05),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
