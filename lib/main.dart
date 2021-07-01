@@ -32,20 +32,19 @@ class BlogApp extends StatelessWidget {
                   Image.asset("images/welcome.png"),
                   Column(
                     children: [
-                      TextButton(
+                      ElevatedButton(
                         onPressed: () {},
                         child: Text(
                           "login".toUpperCase(),
                         ),
-                        style: TextButton.styleFrom(
-                          backgroundColor: Colors.grey[100],
+                        style: ElevatedButton.styleFrom(
                           primary: Colors.blueGrey[900],
                           minimumSize: Size(250.0, 45.0),
                           elevation: 0.0,
                         ),
                       ),
                       SizedBox(
-                        height: 2.0,
+                        height: 10.0,
                       ),
                       TextButton(
                         onPressed: () {},
@@ -53,8 +52,8 @@ class BlogApp extends StatelessWidget {
                           "register".toUpperCase(),
                         ),
                         style: TextButton.styleFrom(
-                          backgroundColor: Colors.grey[400],
-                          primary: Colors.white,
+                          backgroundColor: Colors.blueGrey[100],
+                          primary: Colors.blueGrey[900],
                           minimumSize: Size(250.0, 45.0),
                           elevation: 0.0,
                         ),
