@@ -1,3 +1,4 @@
+import 'package:blog_app_flutter/blog_page.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatelessWidget {
@@ -27,7 +28,14 @@ class LoginPage extends StatelessWidget {
                 Column(
                   children: [
                     ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => BlogPage(),
+                          ),
+                        );
+                      },
                       child: Text(
                         "login".toUpperCase(),
                       ),
