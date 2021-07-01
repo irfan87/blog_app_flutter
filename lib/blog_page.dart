@@ -50,12 +50,7 @@ class BlogPage extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Column(
-                  children: List.generate(
-                    widgetBlogList.length,
-                    (index) => widgetBlogList[index],
-                  ),
-                ),
+                ...widgetBlogList,
                 TextButton(
                   onPressed: () {},
                   child: Text(
