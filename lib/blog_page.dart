@@ -153,6 +153,30 @@ class BlogPage extends StatelessWidget {
                 SizedBox(
                   height: 20.0,
                 ),
+                TextButton(
+                  onPressed: () {},
+                  child: Text(
+                    "terms and conditions".toUpperCase(),
+                  ),
+                  style: TextButton.styleFrom(
+                    primary: Colors.blueGrey[500],
+                    minimumSize: Size(double.infinity, 45.0),
+                    elevation: 0.0,
+                  ),
+                ),
+                TextButton(
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                  child: Text(
+                    "sign out".toUpperCase(),
+                  ),
+                  style: TextButton.styleFrom(
+                    primary: Colors.red[300],
+                    minimumSize: Size(double.infinity, 45.0),
+                    elevation: 0.0,
+                  ),
+                ),
               ],
             ),
           ),
