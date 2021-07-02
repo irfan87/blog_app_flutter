@@ -2,6 +2,10 @@ import 'package:blog_app_flutter/widgets/widget_blog_list.dart';
 import 'package:flutter/material.dart';
 
 class BlogPage extends StatelessWidget {
+  BlogPage({required this.dataFromLoginPage});
+
+  final String dataFromLoginPage;
+
   final List<Widget> widgetBlogList = [
     widgetBlogs(
       blogImage: "images/rich.png",
@@ -29,7 +33,7 @@ class BlogPage extends StatelessWidget {
       backgroundColor: Colors.white,
       appBar: AppBar(
         title: Text(
-          "The Blog",
+          dataFromLoginPage,
           style: TextStyle(
             color: Colors.black54,
             letterSpacing: 3.0,
