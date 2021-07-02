@@ -1,15 +1,26 @@
+import 'package:blog_app_flutter/blog_detail_page.dart';
 import 'package:flutter/material.dart';
 
 Widget widgetBlogs({
   required String blogImage,
   required String blogTitle,
   required String blogSubtitle,
+  required BuildContext context,
 }) {
   return Padding(
     padding: const EdgeInsets.only(bottom: 8.0),
     child: InkWell(
       onTap: () {
-        print(blogTitle);
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => BlogDetailPage(
+              image: blogImage,
+              title: blogTitle,
+              subtitle: blogSubtitle,
+            ),
+          ),
+        );
       },
       borderRadius: BorderRadius.circular(20.0),
       child: Container(

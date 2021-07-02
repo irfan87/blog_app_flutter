@@ -6,26 +6,29 @@ class BlogPage extends StatelessWidget {
 
   final String dataFromLoginPage;
 
-  final List<Widget> widgetBlogList = [
-    widgetBlogs(
-      blogImage: "images/rich.png",
-      blogTitle: "Top 10 tips to retired at 40",
-      blogSubtitle: "The best tips for those who planning to retire early.",
-    ),
-    widgetBlogs(
-      blogImage: "images/house.png",
-      blogTitle:
-          "Learn from the pro to purchase your first house with the five steps",
-      blogSubtitle:
-          "It's important to have your own house, to shelter your family safe. Here is the tips from our professional house manager.",
-    ),
-    widgetBlogs(
-      blogImage: "images/apps.png",
-      blogTitle: "7 apps that can make your life more productive",
-      blogSubtitle:
-          "These apps will boost your daily life to become more productive.",
-    ),
-  ];
+  List<Widget> widgetBlogList({required BuildContext context}) => [
+        widgetBlogs(
+          blogImage: "images/rich.png",
+          blogTitle: "Top 10 tips to retired at 40",
+          blogSubtitle: "The best tips for those who planning to retire early.",
+          context: context,
+        ),
+        widgetBlogs(
+          blogImage: "images/house.png",
+          blogTitle:
+              "Learn from the pro to purchase your first house with the five steps",
+          blogSubtitle:
+              "It's important to have your own house, to shelter your family safe. Here is the tips from our professional house manager.",
+          context: context,
+        ),
+        widgetBlogs(
+          blogImage: "images/apps.png",
+          blogTitle: "7 apps that can make your life more productive",
+          blogSubtitle:
+              "These apps will boost your daily life to become more productive.",
+          context: context,
+        ),
+      ];
 
   @override
   Widget build(BuildContext context) {
@@ -54,7 +57,7 @@ class BlogPage extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                ...widgetBlogList,
+                ...widgetBlogList(context: context),
                 TextButton(
                   onPressed: () {},
                   child: Text(
